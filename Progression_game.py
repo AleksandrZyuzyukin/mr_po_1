@@ -4,7 +4,8 @@ from games_engine import play_game
 
 
 def generate_progression():
-    length = random.randint(5, 10)
+
+    length = random.randint(5, 10)  #
     start = random.randint(1, 10)
     ratio = random.randint(2, 5)
     progression = [start * (ratio ** i) for i in range(length)]
@@ -15,4 +16,9 @@ def generate_progression():
 
 
 def play_progression_game():
+
     play_game(generate_progression, "What number is missing in the progression?", max_rounds=3)
+
+
+if __name__ == "__main__":
+    play_progression_game()
